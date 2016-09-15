@@ -45,8 +45,7 @@
 }
 
 .parallax {
-  width: 100%;
-  height: 450px;
+  height:100vh;
   overflow: hidden;
   display: block;
 }
@@ -62,8 +61,32 @@
 }
 .parallax .small-info.title{
     top:30%;
+    text-align: left ;
+    padding-left:30px;
+    background-color:rgba(0,0,0,.8);
+    width:60%;
+    transform-origin: left bottom;
+    transform: skewY(7deg);
 }
-.parallax .small-info h3 {
+.section .section-description .small-info.title{
+    position: absolute;
+    top:0%;
+    text-align: right ;
+    padding:10px 30px;
+    background-color:#331452;
+    width:600px;
+    transform-origin: left bottom;;
+    transform: skewY(6deg);
+    margin-left:-300px;
+    left:20%;
+}
+@media(max-width: 768px){
+  .section .section-description .small-info.title{
+    top:12%;
+  }
+}
+
+.parallax .small-info h2 {
   max-width: 790px;
   margin: 0 auto;
   line-height: 1.4;
@@ -81,10 +104,10 @@
 @media (max-width: 467px) {
   .parallax {
   width: 100%;
-  height: 60vh;
+  height: 80vh;
   }
   .parallax .parallax-image img {
-  left:-45px;
+  left:-185px;
   height: 80vh;
   width: auto;
   position: relative;
@@ -95,13 +118,16 @@
   -ms-filter:brightness(60%);*/
   /*left:-424px;*/
   }
-
+  .parallax .small-info{
+    top:65%;
+    position: fixed;
+  }
 
 
 }
 .navbar.navbar.navbar-transparent.navbar-fixed-top{
   height:80px;
-  opacity: 1;
+  opacity: 0.7;
   background-color: #331452;
 }
 .navbar.navbar.navbar-fixed-top{
@@ -114,45 +140,45 @@
   width:90px;
 }
 .parallax .small-info.ofsted{
-    top:320px;
     position:fixed;
     z-index: 2000;
 }
-#ofstedLogo{
-  position:relative;
+.parallax .small-info.ofsted img{
+    opacity: .7;
+    width: 170px;
 }
+#ofstedLogo{
+
+}
+
 @media (max-width: 768px) {
   .navbar.navbar.navbar-transparent.navbar-fixed-top{
   height:72px;
-  opacity: 1;
+  opacity: .5;
   background-color:#331452;
   }
   .navbar.navbar.navbar-fixed-top{
   height:58px;
   background-color:#331452 ;
-  opacity:1;
+  opacity:.5;
   }
-  
+
   .navbar-brand img{
   width:80px;
   }
 
-  
   .parallax .small-info button.btn{
     display:none;
-    
+
   }
-  .parallax .small-info.ofsted{
-    top:385px;
-    position: fixed;
-    
-  }
+
   .parallax .small-info.ofsted img{
     width:110px;
     height:auto;
   }
   .parallax .small-info.title{
     top:120px;
+    width: 70%;
   }
   .parallax .small-info.title h1{
     font-size: 30px !important;
@@ -160,7 +186,7 @@
   .parallax .small-info.title h3{
     font-size: 18px !important;
   }
-} 
+}
 .big-map {
   height: 100%;
   width: 100%;
@@ -287,7 +313,7 @@
 }
 .home .img-container2 {
   border-radius:  10px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 .home .img-container2 img {
   width: 100%;
@@ -324,7 +350,7 @@
   -moz-transform:scale(1.2);
   -o-transform:scale(1.2);
   -ms-transform:scale(1.2);
-  
+
 }
 .home .section-testimonials .carousel-control {
   left: -70px;
@@ -492,7 +518,7 @@
     font-size: 50px;
   }
 }
- 
+
 
 .project-content {
   position: fixed;
@@ -641,19 +667,15 @@ body.noscroll {
 }
 @media (max-width: 768px) {
   .small-info.hand {
-  display: none;
+  top:470px;
+  left:105px;
   }
 }
-.small-info.secondhand {
-  text-align: center;
-  top:10%;
-  left:30%;
-  position:absolute;
-}
+
 @media (max-width: 768px) {
   .small-info.secondhand {
   text-align: center;
-  top:200px;
+  top:270px;
   left:65px;
   position:absolute;
  }
@@ -661,7 +683,7 @@ body.noscroll {
 @media (max-width: 768px) {
   #opentext {
     display:block;
-    
+
   }
 }
 @media (max-width: 768px) {
@@ -677,6 +699,30 @@ body.noscroll {
 @media (max-width: 992px) {
 .nav.navbar-nav.navbar-right {
   position: relative;
-  top:-60px;
+  top:0px;
   left:50px;
+  }
+.phone{
+  border-color:black;
+  color:black;
+  font-size: 30px;
+  position: relative;
+  top:80%;
+  margin-left: 25%;
+  }
 }
+.singlecolumn {
+  width:50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 768px) {
+  .singlecolumn{
+    width: 85%;
+  }
+}
+/*  not working...@media (max-width: 768px) {
+  .doublecolumn{
+    width: 55%;
+  }
+}*/
